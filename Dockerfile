@@ -8,5 +8,4 @@ RUN             apt-get update && \
 ENV             SHELL /bin/bash
 RUN             wget https://people.mozilla.org/~sstangl/mozjs-31.5.0.tar.bz2 -O /usr/src/mozjs-31.5.0.tar.bz2 && \
                 cd /usr/src/ && tar xvf mozjs-31.5.0.tar.bz2 && rm mozjs-31.5.0.tar.bz2 && \
-                cd mozjs-31.5.0/js/src && ./configure && make -j1 && make install && \
-                cd /usr/src && rm -r mozjs-31.5.0
+                cd mozjs-31.5.0/js/src && ./configure && make -j1 && make install && make clean
